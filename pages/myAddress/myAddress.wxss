@@ -1,0 +1,15 @@
+page{background:#f9f9f9;}
+.address-list{border-bottom: #e7e7e7 1rpx solid; padding-top:30rpx; padding-bottom: 30rpx; background:#fff;}
+.address-checked{display: block; float:left;padding-left: 20rpx; padding-top: 10rpx;}
+.address-message{ float:left;padding-left: 10rpx; font-size: 28rpx;}
+.address-usear{padding-bottom: 10rpx;}
+.address-tel{ padding-left: 20rpx;}
+.address-address{ line-height: 42rpx;color:#747474;}
+.address-edit{ width: 44rpx; height: 46rpx; display: block; float:right;margin-right: 20rpx;padding-top:34rpx;}
+.address-add{height: 100rpx; border-top:1rpx solid #eaeaea; position: fixed; left: 0rpx; bottom:0rpx; width: 100%;background: #fff;}
+.address-add-icon{height: 40rpx; width: 40rpx; background: #3283fa; border-radius: 20rpx;display: block; line-height: 40rpx; text-align:center; color: #fff; float: left; 
+ margin-left: 20rpx; margin-top: 30rpx;margin-right: 10rpx;
+}
+.address-add title{line-height: 100rpx; font-size: 32rpx;}
+.address-arrow{width: 14rpx; height: 28rpx; position: fixed; right: 20rpx; bottom:36rpx;}
+.address-usear{font-size: 36rpx;}

@@ -1,0 +1,25 @@
+<radio-group class="radio-group" bindchange="setDefaultAddress">
+  <view class="radio" wx:for-items="{{items}}" wx:key="items" >
+    <view class="address-list">
+      <radio class="address-checked" value="{{item.id}}" checked="{{item.isdefault}}"/>
+      <view class="address-message" bindtap="{{dfrom=='order'?'seladdr':'addressDetail'}}" data-id="{{item.id}}">
+        <view class="address-usear">
+          <title class="address-name">{{item.name}}</title>
+          <title class="address-tel">{{item.mobile}}</title>
+        </view>
+        <title class="address-address">{{item.address}}</title>
+      </view>
+      <block wx:if='{{dfrom!="order"}}'>
+
+      <image class="address-edit" src="../../image/edit.png" bindtap="delAddress" data-id="{{item.id}}"/>
+      </block>
+      <view class="clear"></view>
+    </view>
+  </view>
+</radio-group>
+<navigator url="/pages/addAddress/addAddress"  hover-class="navigator-hover">
+  <view class="address-add">
+    <title><span class="address-add-icon">+</span>新增收货地址</title>
+    <image class="address-arrow" src="../../image/right.png" />
+  </view>
+</navigator>

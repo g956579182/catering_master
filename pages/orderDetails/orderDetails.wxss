@@ -1,0 +1,16 @@
+@import "../confirmOrder/confirmOrder.wxss";
+.order-status{line-height: 90rpx;background:#fff; border-bottom: 1rpx #d7d7d7 solid;}
+.order-status-text{padding-left:30rpx;}
+.business{text-align: center; }
+.business image{width: 30rpx; height: 30rpx; }
+.calculation{width:720rpx;height: 50rpx;display: block;}
+.calculation-perice{float: left;}
+.calculation-freight{float: right;}
+
+.form-row-box{ margin-right: 30rpx; line-height: 50rpx;}
+.form-row-box-left{float:left;}
+.form-row-box-right{float:right; color:red;}
+.order-btn-btn{background:#509bee; width: 650rpx; height: 80rpx; line-height:80rpx; text-align: center; 
+color:#fff; margin-top: 30rpx; border-radius: 8rpx;}
+.order-btn-btn01{background:#dbdbdb;border:1rpx solid #c3c3c3; color: #3e3e3e;}
+.order-btn-btn02{background:#ff8230;}

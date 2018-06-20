@@ -1,0 +1,34 @@
+
+page{
+    background-color:#efefef;
+}
+
+.car-list{ height:180rpx; background: #fff;padding-top: 15rpx;padding-bottom: 15rpx;padding-right: 20rpx;}
+.car-checkbox{padding-top: 80rpx; padding-right: 15rpx; padding-left: 15rpx; float: left}
+.car-goods-img{float: left}
+.car-goods-img image{width:180rpx; height: 180rpx; border-radius: 8rpx; }
+
+.car-text{float:left; display: flex; flex-direction: column;padding-left:20rpx; padding-top:8rpx; position: relative; height: 172rpx;}
+.car-text-title{font-size:34rpx; color:#1d1d1d;   }
+.car-text-rule{font-size:22rpx; color:#9f9f9f; padding-top: 26rpx;}
+.car-text-rule span{padding-right: 10rpx;}
+.car-text-perice{font-size:34rpx; color:#e70505; position: absolute;left: 20rpx;bottom:0rpx; }
+
+.car-control{float:right; position: relative; height: 200rpx;}
+
+.car-checked{width:180rpx; height: 44rpx;}
+.car-checked span{width: 44rpx; height: 44rpx;  display: block;float:right;border-radius: 22rpx; text-align: center; line-height: 40rpx;}
+.car-checked span:nth-child(3){ border: 1rpx solid #2094ff; color:#2094ff; }
+.car-checked span:nth-child(1){background:#2094ff; color: #fff;}
+.car-checked title{margin: 0 15rpx 15rpx; line-height: 50rpx;}
+.car-del{float:right; width:49rpx; height: 52rpx; }
+.car-checked{position: absolute; right:0rpx; bottom:20rpx;}
+.car-line{height: 1rpx; background: #e4e4e4; margin: 0 20rpx 0 20rpx;}
+
+.car-paly{height: 110rpx; background:#fff; position: fixed; bottom:0rpx; width: 100%;z-index: 99;}
+.paly{width:265rpx; height: 110rpx; text-align: center; line-height: 110rpx; background: #ff7b16; float: right;color:#fff;}
+
+.paly-checkbox{ float: left; line-height: 110rpx; font-size: 28rpx; padding-left: 20rpx;}
+
+.paly-perice{float:left;line-height: 110rpx; font-size: 36rpx; padding-left: 20rpx; color:#ff7b16;}
+.car-member-btn{position: absolute; right:0; bottom:30rpx; width:190rpx;}

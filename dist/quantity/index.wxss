@@ -1,0 +1,56 @@
+.zan-quantity {
+  color: #666;
+}
+.zan-quantity view {
+  display: inline-block;
+  line-height: 60rpx;
+  
+  text-align: center;
+  min-width: 60rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 28rpx;
+ 
+}
+.zan-quantity .zan-quantity__minus {
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+}
+.zan-quantity .zan-quantity__text {
+ 
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height:60rpx;
+  width: 60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.zan-quantity .zan-quantity__plus {
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+}
+.zan-quantity .zan-quantity--disabled {
+  background: #f8f8f8;
+  color: #bbb;
+  border-color: #e8e8e8;
+}
+.zan-quantity--small view {
+  min-width:60rpx;
+  line-height:60rpx;
+}
+.zan-quantity--small .zan-quantity__text { width: 60rpx; line-height:60rpx;height:60rpx}
+.zan-quantity__plus{ color: #fff; border: none;}
+
+
+.style01 .zan-quantity__plus{background:#ff6d00;}
+.style01 .zan-quantity .zan-quantity__text{ border: 1rpx solid #ff6d00;}
+.style01 .zan-quantity view{border: 1rpx solid #ff6d00;}
+
+.style02 .zan-quantity__plus{background:#ff547b;}
+.style02 .zan-quantity .zan-quantity__text{ border: 1rpx solid #ff547b;}
+.style02 .zan-quantity view{border: 1rpx solid #ff547b;}
+
+.style03 .zan-quantity__plus{background:#09bb07;}
+.style03 .zan-quantity .zan-quantity__text{ border: 1rpx solid #09bb07;}
+.style03 .zan-quantity view{border: 1rpx solid #09bb07;}

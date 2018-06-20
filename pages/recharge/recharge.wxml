@@ -1,0 +1,14 @@
+<view class="out-bg">
+  <view class="out-bg-box">
+    <view class="out-title">用户充值</view>
+    <view class="out-box">
+      <label>￥</label>
+      <input type="number" bindblur="setAmount"/>
+    </view>
+    <view class="out-surplus"> </view>
+  </view>
+</view>
+<view class="out-explain"></view>
+<view class="out-btn">
+<button class="zan-btn zan-btn--danger" bindtap="charge">确认充值</button>
+</view>

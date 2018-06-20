@@ -1,0 +1,24 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="activity-box activity-title-box">
+  <image class="activity-img" src="{{imgurl+shopActivity.photos}}" wx:if='{{shopActivity.photos}}'></image>
+  <view class="activity-right">
+    <view class="activity-title">{{shopActivity.name}}</view>
+    <view class="activity-time-name">活动时间:</view>
+    <view class="activity-time">{{shopActivity.starttime}}<span class="activity-time-sign">至</span>{{shopActivity.endtime}}</view>
+  </view>
+  <view style="clear:both;"></view>
+</view>
+
+<view class="activity-box">
+  <view class="activity-introduce-box">
+    <view class="activity-introduce-name-box">
+      <view class="activity-introduce-name"> 活动简介</view>
+    </view>{{shopActivity.descr}}
+  </view>
+</view>
+
+<view class="activity-detailed-box">
+ <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+
+</view>

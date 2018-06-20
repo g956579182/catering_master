@@ -1,0 +1,252 @@
+/* pages/aa/aa.wxss */
+.prodeal{
+  background: #F4F4F4;
+}
+.productarea{
+  background: #fff;
+  margin-bottom: 20rpx;
+
+}
+.proname,
+.proprice,
+.productmsg{
+  padding: 0 30rpx;
+}
+.bgpic{
+  width: 750rpx;
+}
+.bgpic image{
+  width: 100%;
+}
+.detailsarea{
+  background:#fff;
+  padding: 0 30rpx;
+}
+
+.bgpic image{
+  margin:  0 auto;
+}
+ .proname{
+  display: flex;
+  justify-content: space-between;
+} 
+.proleft{
+  width: 360rpx;
+}
+.proname .prona{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "microsoft yahei";
+  display: block;
+  color: #515151;
+}
+.procom{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 40rpx 0;
+}
+.procom .comments{
+  font-size: 16px;
+  color: #4C4C4C;
+  font-family: "mmicrosoft yahei";
+}
+.proname .shouliang{
+  font-size: 12px;
+  font-family: "microsoft yahei";
+  color: #B5B5B5;
+  display: block;
+  margin: 8px 0;
+}
+.proname .lijian{
+  font-size: 12px;
+  font-family: "microsoft yahei";
+  color: #FA7777;
+  border: 1px solid #FA7777;
+  display: block;
+  width: 70rpx;
+  text-align: center
+}
+.conm{
+  font-size: 14px;
+  color: #999999;
+}
+.connect{
+  width: 140rpx;
+}
+.shoper .shopcon{
+  text-align: right;
+  font-size: 16px;
+  color: #666;
+}
+.proprice{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.proprice .priceleft .proprice .rmb{
+  font-size: 24px;
+  color: #FB4E44;
+  font-family: 'microsoft yahei';
+  font-weight: bold;
+}
+
+.priceright button{
+  height: 36px;
+  font-size: 14px;
+  color: #666666;
+  background: #FFD161;
+  border-radius: 18px 18px;
+}
+.productmsg text{
+  display: block;
+}
+.productmsg{
+  border-top: 1px solid #e5e5e5;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.productmsg text:first-child{
+  font-size: 16px;
+  color: #ACACAC;
+  margin-bottom: 30rpx;
+}
+.productmsg text:last-child{
+  font-size: 16px;
+  color: #737373;
+}
+.userright .username .coments-pic image{
+  width:100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.conname{
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+}
+.conname .userleft{
+  width: 96rpx;
+  height: 96rpx;
+}
+.conname .userleft image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.userright .username .names{
+  font-size: 16px;
+  color: #373737;
+  font-family: "microsoft yahei";
+}
+.userright .username .datadeal{
+  font-size: 12px;
+  color: #707070;
+}
+.userright .username .conten{
+  width: 560rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.userright .username .zan{
+  font-size: 12px;
+  color: #999;
+  margin:15rpx 0;
+
+}
+.userright .username .coments{
+  font-size: 14px;
+  color: #373737;
+}
+.probottom{
+  background: #4F4F4F;
+  display: fixed;
+  bottom: 0;left: 0;
+  padding: 30rpx 30rpx;
+  text-align: right;
+  position: relative;
+  
+}
+.probottom .buju{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.probottom image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25rpx;
+  left: 30rpx;
+}
+.probottom text{
+  color: #A1A1A1;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.probottom text:first-child{
+  margin-left: 140rpx;
+}
+.probottom text:last-child{
+  font-weight: bold;
+}
+.shade{background-color:#000;position:fixed;z-index: 49;width: 100%;height: 100%;opacity: 0.6;margin: 0;left: 0;top:0;right:0;bottom: 0;}
+.particulars{border:0;margin:25% auto;z-index: 50;position: fixed;background: #fff;bottom:320rpx;left:7%;border-radius: 5px;width: 640rpx;height: 260rpx;}
+
+.product-msg{
+  border-bottom:1px solid #999;
+  padding: 20rpx;
+}
+.product-msg text:first-child{
+  font-size: 14px;
+  color: #000;
+  display: block
+}
+.product-msg text:nth-child(2){
+  font-size: 12px;
+  color: #000;
+  display: block;
+  margin: 10rpx 0;
+  
+}
+.product-msg text:nth-child(3),
+.product-msg text:nth-child(4),
+.product-msg text:nth-child(5){
+  font-size: 12px;
+  color: #000;
+  display: inline-block;
+  border: 1px solid #373737;
+  padding: 4rpx 10rpx;
+  margin-left: 30rpx;
+  
+}
+.pricebot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #B5B5B5;
+  padding: 20rpx;
+  
+}
+.pricebot text{
+  font-size: 16px;
+  color: red;
+  font-family: "microsoft yahei";
+}
+.pricebot button{
+  width: 160rpx;
+  height: 60rpx;
+  background: #FFD161;
+  color: #4C4C4C;
+  font-size: 12px;
+  border-radius: 15px 15px;
+
+}
+.shadebg{background-color:#000;position:fixed;z-index: 88;width: 100%;height: 100%;margin: 0;left: 0;top:0;right:0;bottom: 0;}
+.par{border:0;margin:25% auto;z-index: 99;position: fixed;background: #fff;bottom:460rpx;left:8%;border-radius: 5px;width: 640rpx;height: 260rpx;}
+.goods-rule-btn01{background: #ff6d00; color: #fff; font-size:28rpx; border:none; height: 60rpx; width:150rpx;
+ line-height: 60rpx; text-align:center; border-radius:6rpx; }
+ .priceright button{color: #fff;font-weight: bold;}
+

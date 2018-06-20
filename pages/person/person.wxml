@@ -1,0 +1,138 @@
+<view class="{{style}}">
+<view class="person-top">
+<view class="qrcode" bindtap="scan">
+    <image src="../../image/qrcode.png"></image>
+</view>
+  <view class="person-box">
+    <view class="person-img">
+      <image class="person-img-box" src="{{member.avatar}}" />
+    </view>
+    <view class="usear-box">
+      <title class="usear-name">{{member.nickname}}</title>
+      <view class="money-box">
+        <title class="money">余额：<span>{{member.balance}}</span>元</title>
+        <title class="integral">返利：<span>{{member.benifit}}</span></title>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view class="order">
+
+  <view class="order-01">
+    <navigator url="/pages/myOrder/all/myOrder?status=0">
+      <view class="order-img">
+        <image src="../../image/order01.png" />
+        <view wx:if="{{member.unpaid}}"><span>{{member.unpaid}}</span></view>
+      </view>
+      <title>待付款</title>
+    </navigator>
+  </view>
+
+  <view class="order-01">
+    <navigator url="/pages/myOrder/all/myOrder?status=1">
+      <view class="order-img">
+        <image src="../../image/order02.png" />
+        <view wx:if="{{member.unsend}}"><span>{{member.unsend}}</span></view>
+      </view>
+      <title>待发货</title>
+    </navigator>
+  </view>
+
+
+  <view class="order-01">
+    <navigator url="/pages/myOrder/all/myOrder?status=2">
+      <view class="order-img">
+        <image src="../../image/order03.png" />
+        <view wx:if="{{member.unpick}}"><span>{{member.unpick}}</span></view>
+      </view>
+      <title>待收货</title>
+    </navigator>
+  </view>
+
+
+  <view class="order-01">
+    <navigator url="/pages/myOrder/all/myOrder?status=3">
+      <view class="order-img">
+        <image src="../../image/order04.png" />
+      </view>
+      <title>已完成</title>
+    </navigator>
+  </view>
+
+
+  <view class="order-01">
+    <navigator url="/pages/myOrder/all/myOrder?status=-1">
+    <view class="order-img">
+      <image src="../../image/order05.png" />
+    </view>
+    <title>退款订单</title>
+    </navigator>
+  </view>
+
+</view>
+
+<view class="person-row">
+  <navigator url="/pages/myAddress/myAddress">
+    <view class="person-list">
+      <image class="icon" src="../../image/myaddress.png" />
+      <title>我的收货地址</title>
+      <image class="more" src="../../image/right.png" />
+    </view>
+  </navigator>
+  <navigator url="/pages/car/car">
+  <view class="person-list">
+    <image class="icon" src="../../image/mycar.png" />
+    <title>我的购物车</title>
+    <image class="more" src="../../image/right.png" />
+  </view>
+  </navigator>
+  <navigator url="/pages/myRecord/myRecord" hover-class="other-navigator-hover">
+  <view class="person-list">
+    <image class="icon" src="../../image/record.png" />
+    <title>我的交易记录</title>
+    <image class="more" src="../../image/right.png" />
+  </view>
+  </navigator>
+  <view class="person-list" bindtap="callCoupon">
+    <image class="icon" src="../../image/coupon.png" />
+    <title>领券中心</title>
+    <image class="more" src="../../image/right.png" />
+  </view>
+</view>
+
+<view class="person-row">
+  <navigator url="/pages/recharge/recharge">
+    <view class="person-list">
+      <image class="icon" src="../../image/recharge.png" />
+      <title>充值</title>
+      <image class="more" src="../../image/right.png" />
+      
+    </view>
+  </navigator>
+  <navigator url="/pages/withdrawals/withdrawals">
+  <view class="person-list">
+    <image class="icon" src="../../image/rebate.png" />
+    <title>返利提现</title>
+    <image class="more" src="../../image/right.png" />
+  </view>
+  </navigator>
+  <view class="person-list"   bindtap="actionSheetTap">
+    <image class="icon" src="../../image/Invitation.png" />
+    <title>我的邀请二维码</title>
+    <image class="more" src="../../image/right.png" />
+  </view>
+</view>
+
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+  <view class="invitation-details-title">邀请好友可以获得返利</view>
+    <image class="invitation-details-img" src="{{qrcode}}"></image>
+</action-sheet>
+
+
+<button class="kefu-box" open-type="contact" style="margin:0; padding:0; list-style-type:none; border:none;">
+    <image src="../../image/kefu.png"/><title>客服</title>
+</button>
+</view>

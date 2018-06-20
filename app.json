@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/evaluation/evaluation",
+    "pages/detail/detail",
+    "pages/goods/goods",
+    
+    "pages/activity/activity",
+    "pages/addAddress/addAddress",
+    "pages/zzgoods/goods",
+    "pages/myAddress/myAddress",
+    "pages/myRecord/myRecord",
+    "pages/storeList/storeList",
+    "pages/since/since",
+    "pages/orderDetails/orderDetails",
+    "pages/recharge/recharge",
+    "pages/withdrawals/withdrawals",
+    "pages/car/car",
+    "pages/myOrder/all/myOrder",
+    "pages/confirmOrder/confirmOrder",
+    "pages/person/person",
+    "wxParse/wxParse",
+    "pages/zzconfirmOrder/confirmOrder",
+    "pages/zzcar/car",
+    "pages/cards/cards"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "微信接口功能演示",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#a5998f",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "#ededed",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/index01.png",
+        "selectedIconPath": "image/index02.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "iconPath": "image/goods01.png",
+        "selectedIconPath": "image/goods02.png",
+        "text": "商品"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "image/we01.png",
+        "selectedIconPath": "image/we02.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

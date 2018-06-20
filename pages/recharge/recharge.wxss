@@ -1,0 +1,10 @@
+page{background: #f0eff5;}
+.out-bg{background:#fff; }
+.out-bg-box{margin-left: 30rpx;}
+.out-title{font-size: 32rpx; line-height: 100rpx;}
+.out-box{height: 110rpx; border-bottom: 1rpx  solid #dedede;}
+.out-box label{font-size:80rpx; float: left; font-family: "微软雅黑"; }
+.out-box input{height: 70rpx; font-size: 70rpx;float: left; width: 400rpx; padding-left: 20rpx; margin-top: 20rpx;}
+.out-surplus,.out-explain{font-size: 28rpx; color:#818181; line-height:70rpx;display: block; height: 70rpx;}
+.out-explain{ text-align: center; line-height:90rpx;}
+.out-btn{width: 90%; margin: 0 auto auto;}

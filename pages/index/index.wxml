@@ -1,0 +1,168 @@
+<import src="/dist/quantity/index.wxml" />
+<import src="/dist/shake/shake.wxml" />
+<template is="shake" data='{{shakeInfo}}' />
+<view class="{{style}}" style="heigth:100%;overflow:hidden;position:absolute;width:100%;">
+  <view class="container apphome">
+
+    <!-- 幻灯片 -->
+    <!--<swiper class="myswiper" current="{{active}}" duration="300" bindchange="swiperSetActive">
+                  <swiper-item wx:for="{{swiperImgs}}" wx:key='{{item}}'>
+                              <image src="{{item}}"></image>
+                                      </swiper-item>
+                                        </swiper>-->
+
+
+    <!-- 幻灯片 -->
+    <!--<swiper class="myswiper" current="{{active}}" duration="300" bindchange="swiperSetActive">
+        <swiper-item wx:for="{{swiperImgs}}" wx:key='{{item}}'>
+            <image src="{{item}}"></image>
+        </swiper-item>
+  </swiper>-->
+
+
+
+    <swiper class="myswiper" current="" duration="300" bindchange="swiperSetActive">
+      <swiper-item wx:for="{{shopInfo.banner}}" wx:key="item">
+        <image src="{{imgDomain+item}}"></image>
+      </swiper-item>
+    </swiper>
+
+    <view class="store">
+      <view class="dianpuname">{{shopInfo.name}}</view>
+      <!-- <view class="qiehuan">
+      <navigator url="/pages/storeList/storeList" hover-class="navigator-hover">
+        门店切换
+      </navigator>
+    </view> -->
+      <view class="dianpudes">
+        <text class="dianpudes-text" wx:for="{{shopInfo.labels}}" wx:key="item">{{item}}</text>
+      </view>
+
+    </view>
+
+    <view class="index-addreee">
+      <view class="dianputop">
+        <view class="index-addree-name">
+          地址：{{shopInfo.address}}
+        </view>
+      </view>
+      <view class="dianpuactivebox">
+        <view class="dianpuactive">
+          <text class="phonebg"></text>
+          <text class="phone-text" bindtap="calling">拨打电话</text>
+        </view>
+        <view class="dianpuactive">
+          <text class="postionbg"></text>
+          <text class="phone-text" bindtap="lookLocation">查看位置</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="catebox">
+      <view class="cate" wx:for="{{categoryInfo}}" wx:key="item">
+        <view class="cateinner" data-id='{{item.id}}' bindtap="goType">
+          <image style="width:100%; height:100%;border-radius: 50%" src="{{imgDomain+item.photos}}"></image>
+        </view>
+        <view class="cateinner-text">{{item.name}}</view>
+      </view>
+    </view>
+
+    <view class="shangpintop  yingxiao">
+      <text class="shuxian"></text>
+      <text class="shangpintopleft">营销活动</text>
+    </view>
+
+    <view class="activity-box">
+      <view class="huodongbox" wx:for="{{activityInfo}}" wx:key="item" bindtap="activity" data-id="{{item.id }}">
+        <view class="activebg">
+          <image src="../../image/activebg.png"></image>
+        </view>
+        <view class="huodongboxleft">
+          <image style="width:150rpx; height:150rpx;" src="{{imgDomain+item.photos}}"></image>
+        </view>
+        <view class="huodongboxright">{{item.name}}</view>
+      </view>
+    </view>
+
+    <view class="shangpintop">
+      <text class="shuxian">
+    </text>
+      <text class="shangpintopleft">商品展示</text>
+      <navigator url="/pages/goods/goods" open-type="switchTab" hover-class="navigator-hover">
+        <text class="more">更多></text>
+      </navigator>
+    </view>
+
+    <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+    <view class="particulars" style="display:{{screenType?'block':'none'}}">
+      <view class='product-img'>
+        <image src="{{showimg}}" class='imgbg' bindtap='seedetails'></image>
+      </view>
+      <view class='floaart'>
+        <view class='prodes'>
+          <text class='product'>{{showgoods}}</text>
+          <text class='descr'>{{showdescr}}</text>
+        </view>
+        <text class="add" bindtap="actionSheetTap" data-index='{{showindex}}'>+</text>
+      </view>
+    </view>
+    <view class="shangpinboxouter">
+      <view class="shangpinbox" wx:for="{{goodsInfo}}" wx:key="item">
+        <view class="shangpinboximg" bindtap="wachted" data-index='{{index}}'>
+          <image style="width:100%; height:330rpx;" src="{{imgDomain+item.photos}}"></image>
+        </view>
+        <view class="shangpinname">{{item.name}}</view>
+        <view>
+          <text class="shangpinprice">￥{{item.price}}</text>
+          <text class="add" bindtap="actionSheetTap" data-index='{{index}}'>+</text>
+        </view>
+      </view>
+    </view>
+    <view class="nomore" wx:if="{{nomore}}">
+      没有更多了
+    </view>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange" wx:if="{{!actionSheetHidden}}">
+      <view class="select-goods-bpx">
+        <view class="select-box select-goods-message ">
+          <image class="select-goods-img" src="{{imgDomain+goods.photos}}"></image>
+          <view class="select-goods-message-right">
+            <view class="select-goods-message-title">{{goods.name}}</view>
+            <view class="select-goods-message-price">￥{{goods.price}}</view>
+          </view>
+        </view>
+        <view class="select-box select-rule-list" wx:if="{{goods.specs.length>0}}">
+          <view class="select-rule-box">
+            <block wx:for="{{goods.specs}}" wx:key="item">
+              <view class="select-rule-name {{gsid==item.id?'select-active':''}}" bindtap="selectSpec" data-index='{{index}}'>{{item.name}}</view>
+            </block>
+            <view style="clear:both;"></view>
+          </view>
+        </view>
+        <view class=" select-box select-number-box">
+          <view class="select-number-left">
+            <view class="select-number-title">购买数量</view>
+            <view class="select-number">剩余件数{{spec.stock}}件</view>
+          </view>
+          <view class="select-number-right">
+            <template is="zan-quantity" data="{{ quantity:spec.quantity,min:0,max:spec.stock, componentId: 'spec_'+spec.id, size: 'small' }}" />
+          </view>
+          <view style="clear:both;"></view>
+        </view>
+      </view>
+
+      <view class="select-btn">
+        <view class="select-btn-car" bindtap="cart">加入购物车</view>
+        <view class="select-btn-buy" bindtap="buy">立即购买</view>
+        <view style="clear:both;"></view>
+      </view>
+
+    </action-sheet>
+  </view>
+  <view class="goods-car">
+    <navigator url="../car/car">
+      <image class="goods-car-img" src="../../image/car.png" />
+      <span class="goods-car-menber">{{cartcount}}</span>
+    </navigator>
+  </view>
+
+</view>

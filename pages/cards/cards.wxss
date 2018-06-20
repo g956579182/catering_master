@@ -1,0 +1,57 @@
+/* pages/person/person.wxss */
+
+page{
+    background-color:#efefef;
+}
+.person-top{position: relative;height: 300rpx;   background:#ff7a16;}
+.qrcode{position: absolute; right:20rpx; top: 10rpx;width: 50rpx; height: 50rpx;}
+.qrcode image{width: 50rpx; height: 50rpx;}
+.person-box{position: absolute; left: 50rpx; top:60rpx; }
+
+.person-img{width:180rpx; height: 180rpx; border-radius: 90rpx;box-shadow:0 0 10rpx rgba(0,0,0, .3);
+ display: block;float:left;background: #ffaf73;}
+ .person-img-box{width:160rpx; height:160rpx; border-radius: 90rpx;margin:10rpx;}
+.usear-box{float:left;padding-left: 24rpx; text-shadow:2rpx 3rpx 2rpx rgba(0,0,0, .3); color: #fff; height: 180rpx;}
+.usear-name{ font-size: 36rpx; line-height: 110rpx;}
+.money-box{font-size:32rpx;}
+
+.integral{ padding-left: 20rpx;}
+
+.order{height:110rpx; background: #fff; margin-top: 10rpx;}
+.order-01{float: left; width: 20%; padding-top: 10rpx;}
+.order-img{margin: 0 auto auto; width: 58rpx ; height: 58rpx; position: relative;}
+.order-img span{background: red; color: #fff; border-radius: 20rpx; width: 30rpx; height: 30rpx; font-size: 22rpx; position: absolute; right: -5rpx; top:-5rpx; text-align: center; line-height: 30rpx;}
+.order-img image{ width: 54rpx ; height: 54rpx;}
+.order-01 title{ font-size: 22rpx; display: block; width: 144rpx; text-align: center; line-height: 42rpx; }
+
+.person-row{margin: 10rpx 0 10rpx 0;  }
+.person-list{height:150rpx; border-bottom: 1rpx solid #ececec; padding-left: 20rpx; position: relative;margin-top: 15rpx;background: #fff;}
+.person-list.notuse{
+  height: 80rpx;
+  margin-bottom: 20rpx;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+}
+.person-list.notuse .title{
+  font-size: 34rpx;
+}
+.icon{width:120rpx; height:120rpx; margin:15rpx 0 0 0rpx; float: left;}
+
+.person-list .title{line-height: 90rpx; font-size: 36rpx;  padding-left: 15rpx;}
+.person-list .condition{
+  display: block;
+  font-size: 24rpx;
+  padding-left: 135rpx;
+  line-height: 10rpx;
+}
+
+.more{width:15rpx; height: 28rpx; position: absolute; right: 28rpx; top:36rpx;}
+.kefu-box{position: fixed; right: 0rpx; bottom: 100rpx; width: 146rpx; height: 62rpx; background: #fbab00;
+ border-radius: 30rpx 0rpx 0rpx 30rpx;}
+.kefu-box image{width: 44rpx; height: 44rpx; margin: 9rpx 0 0 15rpx ; float: left;}
+.kefu-box title{font-size: 32rpx;color: #fff; padding-left: 10rpx; display: block; float: right;
+line-height: 62rpx;padding-right: 15rpx;}
+.invitation-details-title{height: 100rpx; background: #ff6d00; color: #fff; line-height: 100rpx; 
+text-align: center; font-size: 36rpx; font-family: "微软雅黑"}
+.invitation-details-img{width: 300rpx;height: 300rpx; margin: 30rpx auto 30rpx auto; display: block;}

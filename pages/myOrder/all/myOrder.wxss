@@ -1,0 +1,43 @@
+/* pages/myOrder/all/myOrder.wxss */
+@import '/pages/common.wxss';
+page{background: #f4f4f4;}
+.top-bar{height: 100rpx; border-bottom: 1rpx solid #e5e5e5; background: #fff;}
+.top-bar-box{float:left; width:122rpx; height: 96rpx; text-align: center; line-height: 96rpx; font-size: 36rpx;}
+.active{border-bottom: 4rpx solid #db1b25; color: #db1b25;}
+
+.order{background: #fff; padding-top:10rpx; padding-bottom:10rpx; border-bottom: 1rpx #e5e5e5 solid;
+border-top: 1rpx #e5e5e5 solid; margin-top: 20rpx; }
+
+.order-box{height: 116rpx; }
+.order-status-box{height: 66rpx; padding-left: 20rpx;}
+.order-title{line-height:66rpx; float:left; font-size:36rpx; }
+.order-status{color:red; float:right;font-size:28rpx; padding-right: 20rpx; padding-top: 23rpx; }
+.order-number{font-size:24rpx;padding-left:20rpx; color: #989898; }
+
+.order-goods-box{padding-top: 10rpx; padding-bottom: 10rpx;background: #f9f9f9;margin-bottom: 10rpx;}
+.order-goods-img{width:150rpx; height: 150rpx; float: left; padding-left: 20rpx; }
+
+.order-goods-text{float:left; padding-left:20rpx; padding-top: 10rpx; }
+.order-goods-title{font-size: 32rpx;}
+.order-goods-rule{font-size: 24rpx;color:#666;line-height: 50rpx;}
+.order-goods-right{float:right; padding-right: 20rpx; width: 40rpx;}
+
+.order-goods-perice{float:right; padding-top: 15rpx; color:#db1b25; font-size: 28rpx; }
+.order-goods-number{font-size: 24rpx;color:#666; padding-top: 15rpx;float:right; }
+.order-total{font-size: 28rpx; height:70rpx; line-height: 70rpx; border-bottom: 1rpx #e5e5e5 solid;  }
+
+.order-btn-box{height: 100rpx;}
+.order-btn{font-size:30rpx;  float: right; margin-top:20rpx; width: 720rpx; }
+.nomore{
+  font-size:12px;
+  text-align: center;
+  height:30px;
+  line-height: 30px;
+  padding-bottom:10px;
+}
+.zan-label{border: none; color: #fff; background: #55bfcf;}
+
+.zan-label001{background: #ec6136;}
+.zan-label002{background: #d1d1d1; color:#2b2519; }
+.zan-label003{background: #69ae2f;}
+

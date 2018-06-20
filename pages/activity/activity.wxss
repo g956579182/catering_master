@@ -1,0 +1,21 @@
+page{background: #fff;}
+.activity-box{margin-left: 20rpx; margin-right: 20rpx; padding-top: 20rpx; padding-bottom: 20rpx; border-bottom: 8rpx solid #f0f0f0;}
+.activity-title-box{}
+.activity-img{width: 230rpx;height: 230rpx; float: left; border-radius: 10rpx;}
+.activity-right{float: left; margin-left: 20rpx;}
+.activity-title{padding-top: 10rpx; width: 450rpx; line-height: 55rpx; font-size: 36rpx; height: 120rpx;}
+.activity-time-name{color: #8d8d8d; font-size: 32rpx; line-height: 55rpx;}
+.activity-time{font-size: 32rpx;color: #8d8d8d;}
+.activity-time-sign{background: #fddebb; padding: 10rpx; color: #f7921d; margin-left: 20rpx; margin-right: 20rpx;  border-radius: 30rpx;}
+
+.activity-introduce-box{border: 1rpx #f7921d solid; font-size: 30rpx; margin-left: 20rpx;
+ margin-right:20rpx; border-radius: 10rpx; position: relative; margin-top: 30rpx;padding:50rpx; line-height: 44rpx; }
+.activity-introduce-name{background: #f7931e; line-height: 50rpx; width:180rpx; height: 50rpx;border-radius: 30rpx;
+ text-align: center; color: #fff; margin-left: 25rpx; }
+.activity-introduce-name-box{position: absolute; width:230rpx; height: 50rpx; background: #fff; top:-25rpx;left: 200rpx; }
+
+.activity-detailed-box{margin-left: 20rpx; margin-right: 20rpx;margin-top: 20rpx; background: #fff9f2;padding: 30rpx; 
+font-size:32rpx; line-height: 50rpx; color: #454648; margin-bottom: 50rpx;}
+
+.activity-detailed-title{line-height: 60rpx;}
+.activity-detailed-content{color: #88898a; }

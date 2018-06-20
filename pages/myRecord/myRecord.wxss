@@ -1,0 +1,17 @@
+page{background:#f4f4f4;}
+.myrecord-box{height: 80rpx; padding:25rpx 0 25rpx 0; border-bottom: 1rpx solid #dedede; font-size: 32rpx;}
+.myrecord{margin: 0 25rpx 0 25rpx ; height:50rpx;}
+.myrecord-name{float: left;}
+.myrecord-time{float: right; color: #a0a0a0; font-size: 28rpx;}
+.myrecord-price{float: left;color: red;}
+.myrecord-status{float: right;color: #c78440;font-size: 30rpx;}
+
+.nomore{
+  font-size:12px;
+  text-align: center;
+  height:30px;
+  line-height: 30px;
+  padding-bottom:10px;
+}
+
+

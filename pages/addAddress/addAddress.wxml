@@ -1,0 +1,68 @@
+<view class="container">
+
+
+
+  <view class="zan-form">
+    <view class="zan-cell zan-form__item">
+      <text class="zan-form__title">收货人</text>
+      <input class="zan-form__input zan-cell__bd" placeholder="用户名" bindinput="getName" value="{{name}}"/>
+    </view>
+    <view class="zan-cell zan-form__item">
+      <text class="zan-form__title">联系电话</text>
+      <input class="zan-form__input zan-cell__bd" type="number" maxlength="20" placeholder="手机或固定电话" bindinput="getMobile" value="{{mobile}}"/>
+    </view>
+    
+    <view class="zan-cell zan-form__item ">
+      <text class="zan-form__title"  bindtap="">具体地址</text>
+      <view class="zan-form__input zan-cell__bd" bindtap="choose" >
+       <view >{{areaInfo}}</view>
+      </view>
+    </view>
+
+    <view class="zan-cell zan-form__item ">
+      <text class="zan-form__title">门牌号</text>
+      <input class="zan-form__input zan-cell__bd" bindblur="getAddress" bindinput="getAddress" value="{{address}}" placeholder="请输入楼号门牌号等详细信息"/>
+    </view>
+    <view class="zan-cell zan-form__item zan-cell--last-child">
+      <text class="zan-form__title">设为默地址</text>
+        <switch bindchange="switchChange" checked="{{isdefault}}"/>
+    </view>
+ 
+
+
+  </view>
+
+ 
+    <view class="zan-btns">
+      <button class="zan-btn zan-btn--primary" bindtap="saveAddress">保存地址</button>
+  
+    </view>
+
+
+</view>
+
+
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;padding-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 400rpx;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

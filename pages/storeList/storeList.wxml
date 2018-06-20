@@ -1,0 +1,19 @@
+  <view class="store-list" wx:for="{{shopList}}" wx:key="id" >
+    <view class="store-list-box">
+      <view class="store-list-box01">
+        <image class="store-img" src="{{imgDomain+item.photos}}" bindtap="getSubsid" data-subsid="{{item.id}}"></image>
+        <view class="store-list-right-box">
+          <view class="store-cention" bindtap="getSubsid" data-subsid="{{item.id}}">
+            <view class="store-name">{{item.name}}</view>
+            <view class="store-address">地址:{{item.address}}</view>
+          </view>
+          <view class="store-btn-box">
+            <view class="store-ipone" bindtap="calling" data-phone='{{item.contact}}'>拨打电话</view>
+            <view class="store-ipone store-tamp" bindtap="lookLocation" data-location='{{item.coordinate}}'>查看地图</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+

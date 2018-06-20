@@ -1,0 +1,566 @@
+page{background: #f0f0f0;}
+
+.sw {
+    margin: 0 auto;
+}
+
+.sw swiper {
+    height: 200rpx;
+}
+
+.sw swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.activityBanner{
+  width:100%;
+  margin-top:48px;
+  position: relative;
+}
+
+.activityBanner image{
+    padding-top:5px;
+    width:100%;
+    height:141rpx;
+    display: block;
+}
+
+.activityBanner .ad_icon{
+    position: absolute;
+    width: 30px;
+    height:10px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/**=============机票开始====================**/
+
+.city-icon {
+    width: 20%;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.date-content {
+  color: #333333;
+  margin-right: 10px;
+}
+
+.date-desc {
+  color: #999999;
+}
+
+
+.index-desc-ul {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 25px;
+}
+
+.index-desc-li {
+  width: 33%;
+  height: 16px;
+  line-height: 16px;
+
+  margin-top: 16px;
+
+  font-size: 12px;
+  color: rgba(188, 188, 188, 1);
+
+}
+
+.icon-safe-box {
+  height: 22px;
+  width: 70px;
+  margin: 0 auto;
+}
+
+.icon-text {
+  height: 16px;
+  line-height: 16px;
+}
+
+.icon-cert, .icon-safe, .icon-ticket {
+  margin-right: 5px;
+}
+
+/**=============机票结束====================**/
+
+/**=============火车票开始====================**/
+
+
+.entry-box{
+  width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 300;
+}
+.order-btn{
+  box-sizing: border-box;
+	background: #FCFCFC;
+	color: #000;
+  font-size: 17px;
+  height: 45px;
+  line-height: 45px;
+  border-top: 1px solid #E8E8E8;
+  text-indent: 44px;
+}
+.order-btn:before{
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -11px;
+	width: 18.5px;
+	height: 21.5px;
+  background: url("http://file.40017.cn/huochepiao/train_weapp/list-fs8.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+.order-btn:after{
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -6px;
+  content: "";
+	width: 8px;
+	height: 12.5px;
+  background: url("http://file.40017.cn/huochepiao/train_weapp/arrow-fs8.png") no-repeat;
+  background-size: contain;
+}
+
+/**=============火车票结束====================**/
+
+/**=============酒店景区开始====================**/
+.hotel-jingd{
+  border:1px solid #E5E5E5;
+  margin:40rpx 20rpx 0;
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  border-radius:4px;
+  box-shadow:0 0 10px #e3e6ea;
+  padding:20rpx 0;
+  text-align: center;
+}
+.hotel-jingd navigator{
+  width:50%;
+}
+.hotel-jingd navigator image{
+  display: block;
+  margin: auto;
+  width: 80rpx;
+  height: 80rpx;
+}
+.hotel-jingd navigator view{
+  color:#666;
+  font-size: 14px;
+  font-family: "微软雅黑",Arial, sans-serif;
+  margin:10rpx auto 20rpx;
+}
+
+.bottomImg image{
+  display: block;
+  margin:40rpx auto 0;
+  padding-bottom: 80rpx;
+  width:100%;
+  height:60rpx;
+}
+
+/*.hotel-jingd{
+  border:1px solid #E5E5E5;
+  margin:40rpx 20rpx 0;
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  border-radius:4px;
+  box-shadow:0 0 10px #e3e6ea;
+  padding:20rpx 0;
+
+}
+.hotel-jingd navigator{
+  width:50%;
+  border-right:1px solid #E5E5E5;
+  text-align: center;
+}
+.hotel-jingd navigator:last-child{
+  border:0;
+}
+.jiu_hotel_box{
+  text-align: left;
+  display: inline-block;
+  padding-left:30rpx;
+}
+.title1{
+  color:#666;
+  font-size: 16px;
+  font-family: "微软雅黑",Arial, sans-serif
+}
+.title2{
+  color:#999;
+  font-size:12px;
+  margin-top:2px;
+  font-family: "微软雅黑",Arial, sans-serif
+}
+.hotel-jingd image{
+  width:60rpx;
+  height:60rpx;
+  padding-bottom:3rpx;
+}
+
+.bottomImg image{
+  display: block;
+  margin:40rpx auto 0;
+  padding-bottom: 80rpx;
+  width:100%;
+  height:60rpx;
+}*/
+/**=============酒店景区结束====================**/
+
+
+.myswiper { height: 389rpx; background: #fff;}
+.myswiper image { height: 389rpx; width:750rpx;}
+.box { position: relative; z-index: 2; top: 1px; margin: 0 20rpx 0; background: white; border-radius: 6px; box-shadow: 0 0 10px #e3e6ea; }
+.tab { position: relative; height: 110rpx; line-height: 90rpx; text-align: center; padding: 20rpx 0 0; font-size: 32rpx; color: #333; border-bottom: solid 1px #e4e4e4; }
+.option { float: left; width: 32%; }
+.tab .option:first-child { margin-left: 2%; }
+.active { font-weight: bold; color: #23beae; }
+.bottom-line { position: absolute; z-index: 100; left: 0; bottom: 0; width: 22%; height: 2px; background: #23beae; transform: translate3d(0,0,0); transition: left .4s; }
+.bottom-line.line-left { left:7%; }
+.bottom-line.line-center { left: 39%; }
+.bottom-line.line-right { left: 71%; }
+
+.search-box  { background: transparent; }
+.city-inner { width: auto; padding: 16px 0; margin: 0 15px; }
+.label-from, .label-to { margin-bottom: 10rpx; }
+.text-from, .text-to { font-size: 40rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.calendar-bar { padding: 15px 0; margin: 0 15px; }
+.search-bar { padding: 20px 15px 40px; }
+.change_city { width: 70rpx; height: 70rpx; margin-top: 15rpx; transform: translate3d(0,0,0) rotate(0deg); transition: 300ms linear; }
+.switch { transform: translate3d(0,0,0) rotate(180deg); }
+.search-bar { border-bottom: 0; }
+button.search-btn { margin:auto; background-color: #23beae; }
+button.search-btn:active { background-color: #23beae; }
+button.search_btn_hover { background-color: #23beae; }
+
+.search_history { text-align: center; padding: 30rpx 0 20rpx; font-size: 24rpx; color: #999; }
+.search_record { padding: 17rpx 0; }
+
+.flow_banner{
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+}
+.flow_banner image{
+  width: 100%;
+  height: 190rpx;
+}
+.footerswiper{
+  height: 190rpx;
+  background: #fff;
+}
+/*.activeEnter {
+  line-height: 100%;
+  color: #a4afc1;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 40rpx;
+}*/
+.activeEnter{
+  position: relative;
+}
+.activeEnter image{
+  display: block;
+  width: 230rpx;
+  height: 24rpx;
+  margin: 40rpx auto 0;
+}
+
+
+/*小程序引导弹屏*/
+.screen-mask {
+  position: fixed;
+  z-index: 990;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+.screen-content {
+  position: fixed;
+  z-index: 991;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.starNav{
+  width: 750rpx;
+  height: 890rpx;
+}
+.appNav{
+  width: 520rpx;
+  height: 490rpx;
+  padding-top: 200rpx;
+}
+.close-screen{
+  width: 226rpx;
+  height: 98rpx;
+  background: url('http://file.40017.cn/touchweixinqq/wxapp/img/home/index/qd_yd_icon_wzdl.png') no-repeat center center;
+  background-size: 100% 100%;
+  margin: 40rpx auto 0;
+}
+.closeX{
+  width: 68rpx;
+  height: 68rpx;
+  background: url('http://file.40017.cn/touchweixinqq/wxapp/img/home/index/icon_tc_gb.png') no-repeat center center;
+  background-size: 100% 100%;
+}
+.starBtn{
+  position: absolute;
+  top: -30rpx;
+  right: 7%;
+  z-index: 10;
+  width: 68rpx;
+  height: 68rpx;
+  background: url('http://file.40017.cn/touchweixinqq/wxapp/img/home/index/icon_home_star.png') no-repeat center center;
+  background-size: 100% 100%;
+}
+
+/*提示框开始*/
+.tip-box{
+  margin: 30rpx 20rpx 10rpx;
+  background:white;
+  border-radius:6px;
+  box-shadow:0 0 10px #e3e6ea;
+  padding: 24rpx 30rpx;
+  position: relative;
+}
+.addr-line{
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 18rpx;
+  font-weight: bold;
+}
+.text-ell{
+  font-size: 24rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #666;
+}
+.goTime{
+  color: #ff5346
+}
+.closeTips-btn{
+  position: absolute;
+  top: 36rpx;
+  right: 34rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+.tip-text{
+  font-size: 24rpx;
+  color: #666;
+}
+.tip-img{
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.txt-mr{
+  margin-right: 40rpx;
+}
+.txt-red{
+  color: #ff5346;
+}
+/*提示框结束*/
+
+/*首页弹屏开始*/
+.mask{
+  width: 100%; 
+  height: 100%; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
+  background: #000; 
+  opacity: 0.6; 
+  overflow: hidden; 
+}
+.homeModal{
+  width: 750rpx;
+  overflow: hidden; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  padding: 100rpx 56rpx;
+  z-index: 1001;
+}
+.homeModal>image{
+  width: 640rpx;
+  height: 800rpx;
+}
+.closeModal-btn{
+  position: absolute;
+  top: 120rpx;
+  right: 70rpx;
+  z-index: 10;
+}
+/*首页弹屏结束*/
+
+
+/*餐饮*/
+view{ font-family: microsoft yahei;}
+.huodongbox{ height:180rpx; width:96%; clear: both; 
+  overflow:hidden;
+  background: url(../../image/activebg.jpg) no-repeat right top;
+  background-size: 20% auto; 
+  margin-left: auto;
+  margin-right:auto; 
+  border: 1rpx solid #ededed;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+.activebg{position: absolute;right: 15rpx;top:0;}
+.activebg image{width: 120rpx;height:120rpx;}
+.shangpintop{ height: 90rpx; line-height: 90rpx; margin-top:20rpx;background: #fff; }
+.shangpintopleft{ float: left; font-size: 35rpx; color: #333; 
+  padding-left:20rpx;
+
+}
+.more{font-size: 35rpx; color: #ccc; float: right; text-align: right; padding-right:20rpx;}
+.welcome{ font-size:20px; text-align: center; color: red}
+.shangpinbox{ float: left; width: 45%; background: #fff;margin-bottom: 30rpx; border:1rpx solid #cecece; margin-left: 3%;
+ border-radius: 8rpx;padding-bottom: 25rpx; }
+.shangpinboximg image{border-radius: 8rpx; }
+.add{ width: 50rpx; height: 50rpx; line-height: 45rpx; text-align: center;
+  color: #fff; border-radius:4px; display: inline-block; float: right;
+  margin-right:20rpx;
+}
+
+
+.liubai{width:100%; height: 180rpx;  clear:both; overflow: hidden;}
+.huodongboxleft{ float: left; width: 150rpx; }
+.huodongboxright{ float: left; padding-left:40rpx; font-size:36rpx; color:#676767;line-height:70rpx; width: 400rpx;}
+.cate{width: 25%; float: left;}
+.cateinner{ 
+  margin-left:auto; margin-right:auto; width:100rpx; height: 100rpx; border-radius:50rpx; background: #ccc;
+  font-size:25rpx; line-height: 100rpx; text-align: center;
+  }
+.dianpuactive{width: 50%; float: left; text-align: center; border-left:1px solid #ccc; margin-left:-1px;
+  margin-top:3px;
+}
+.dianputop{ 
+ 
+
+  border-bottom:1px solid #ccc; height: 80rpx; line-height: 80rpx;
+  padding-left:20rpx;
+  font-size:32rpx;
+  color:#333;
+
+  }
+.index-addree-name{
+    white-space: nowrap;
+ width: 600rpx;
+   text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dianpuactivebox{height: 80rpx; line-height: 80rpx;}
+
+.phonebg{ 
+  background: url(../../image/phone.jpg) no-repeat; 
+   display:inline-block; width: 24rpx; height: 24rpx; 
+   background-size:24rpx 24rpx; 
+ 
+}
+.postionbg{
+  background: url(../../image/position.jpg) no-repeat; 
+  display:inline-block; width: 20rpx; height: 24rpx; 
+  background-size:20rpx 24rpx; 
+}
+ .shuxian{ 
+  display: inline-block; 
+   height: 40rpx; 
+   width: 2px; 
+  
+   float:left;
+   margin-top:26rpx;
+   margin-left:20rpx;
+}
+
+
+.cateinner-text{ font-size:28rpx; text-align: center; color: #333; padding-top:14rpx;white-space: nowrap;width: 100%;text-overflow: ellipsis;overflow: hidden;}
+.catebox{ margin-top: 15rpx; padding-top: 35rpx; clear: both; overflow: hidden; padding-bottom:40rpx; background: #fff;}
+.shangpintop.yingxiao{ border-top: 1px solid #ededed; margin-top:5px; background: #fff; }
+.activity-box{background:#fff;position: relative;}
+.phone-text{margin-left:14rpx; color:#333; font-size:32rpx;}
+.dianpuname{ font-size:38rpx; color:#333; padding-left:20rpx; height: 80rpx; line-height:80rpx;}
+.dianpudes{ padding-left:20rpx; margin-bottom:20rpx; margin-top:20rpx;}
+.dianpudes-text{ font-size:36rpx; background: #f4cace;  padding: 5rpx 15rpx ; border-radius:14px; color:#fff;margin-right: 15rpx;}
+.shangpinname{ padding-left:10rpx;  font-size:32rpx; color:#676767; height: 46rpx; line-height: 46rpx; overflow: hidden; 
+  width:320rpx;  text-overflow:ellipsis; white-space: nowrap;
+ }
+.shangpinprice{ color: #f54513; font-size:32rpx; height: 46rpx; line-height: 46rpx; overflow: hidden; padding-left:10rpx;}
+.shangpinboxouter{ margin-bottom:10rpx; background: #fff;}
+.cart{ 
+  position:relative;
+  margin-top:30rpx;
+  margin-bottom:10rpx;
+  height: 110rpx; width: 110rpx; background: url(../../../image/cartbg.jpg) no-repeat;
+  background-size:110rpx 110rpx; clear:both; overflow: hidden;
+  float:right; margin-right:20rpx;
+  
+}
+.cartnumber{ position: absolute;
+  color: #fff; font-size:20rpx;
+  left: 55rpx;
+  top:26rpx;
+}
+
+.store{position: relative; background: #fff;}
+.qiehuan{position: absolute; right: 30rpx; top: 20rpx; padding-left:50rpx;
+ background: url(../../image/qiehuan.png); background-repeat:no-repeat; background-size: 36rpx 27rpx;
+  background-position-y:10rpx;color: #51abf0; }
+  .nomore{
+  font-size:12px;
+  text-align: center;
+  height:30px;
+  line-height: 30px;
+  padding-bottom:10px;
+}
+.index-addreee{ background: #fff; padding-bottom: 10rpx;}
+
+.shade{background-color:#000;position:fixed;z-index: 49;width: 100%;height: 100%;opacity: 0.6;margin: 0;left: 0;top:0;right:0;bottom: 0;}
+.particulars{height:300px;width:295px;border:0;margin:25% 40px;z-index: 50;position: fixed;background: #fff;bottom: 50px;left:0;}
+.product-img{width: 100%;height:80%;margin-bottom: 15px;}
+.product-img .imgbg{width: 100%;height:100%;}
+.product{color:#000;font-size: 16px;margin-left: 10px;display: block}
+.descr{color:#999;font-size: 14px;margin-left: 10px;display: block}
+
+
+.style01 .shuxian{background: #ff6d00;}
+.style01 .add{background: #ff6d00;}
+
+.style02 .shuxian{background: #ff547b;}
+.style02 .add{background: #ff547b;}
+
+.style03 .shuxian{background: #09bb07;}
+.style03 .add{background: #09bb07;}
+.particulars .add{
+  margin-top: -90rpx;
+}
+.showprice{
+  color:tomato;
+}
+

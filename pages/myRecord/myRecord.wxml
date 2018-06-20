@@ -1,0 +1,25 @@
+<block wx:for='{{logs}}' wx:key='i'>
+<view class="myrecord-box">
+  <view class="myrecord">
+      <title class="myrecord-name">
+      <block wx:if='{{item.type==1}}'>充值</block>
+      <block wx:if='{{item.type==2}}'>返利</block>
+      <block wx:if='{{item.type==3}}'>提现</block>
+      <block wx:if='{{item.type==4}}'>消费</block>
+      <block wx:if='{{item.type==5}}'>退款</block>
+      </title>
+       <title class="myrecord-time">{{item.created_at}}</title>
+  </view>
+  <view class="myrecord">
+      <title class="myrecord-price">
+      <block wx:if='{{item.type==1||item.type==2||item.type==5}}'>+</block>
+      <block wx:if='{{item.type==3||item.type==4}}'>-</block>
+      ￥{{item.amount}}
+      </title>
+       <title class="myrecord-status">{{item.status}}</title>
+  </view>
+</view>
+</block>
+<view class="nomore" wx:if="{{nomore}}">
+  没有更多了
+</view>

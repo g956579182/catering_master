@@ -1,0 +1,200 @@
+<view class="container">
+  <view class="order-status">
+    <title class="order-status-text">
+    <block wx:if='{{detail.status==0}}'>
+    待支付
+    </block>
+    <block wx:if='{{detail.status==1&&detail.dtype==0}}'>
+    待自提
+    </block>
+    <block wx:if='{{detail.status==1&&detail.dtype==1}}'>
+    待发货
+    </block>
+    <block wx:if='{{detail.status==2}}'>
+    待收货
+    </block>
+    <block wx:if='{{detail.status==3}}'>
+    已完成
+    </block>
+    <block wx:if='{{detail.status==-1}}'>
+    退款中
+    </block>
+    <block wx:if='{{detail.status==-2}}'>
+    已退款
+    </block>
+    </title>
+  </view>
+  <view class="order-address">
+  <block wx:if='{{detail.dtype==1}}'>
+    <image class="order-address-icon" src="../../image/address_icon.png" />
+    <view class="order-address-message">
+      <title>收货人：{{detail.receiver}} </title>
+      <title class="order-address-tel">{{detail.mobile}}</title>
+      <view class="order-addreess-address">收货地址：{{detail.province+detail.city+detail.country+detail.address}}</view>
+    </view>
+    <image class="address-bg" src="../../image/address.png" />
+  </block>
+  <block wx:if='{{detail.dtype==0}}'>
+    <image class="order-address-icon" src="../../image/address_icon.png" />
+    <view class="order-address-message">
+      <title>取货时间：{{detail.carrytime}} </title>
+      <view class="order-addreess-address">店铺地址：{{shop.address}}</view>
+    </view>
+    <image class="address-bg" src="../../image/address.png" />
+  </block>
+  </view>
+
+  <view style="background:#fff;">
+  <block wx:for='{{detail.items}}' wx:key='item'>
+    <view class="order-goods-box">
+      <image class="order-goods-img" src="{{imgDomain+item.photos}}" />
+      <view class="order-goods-text">
+        <view class="order-goods-title">{{item.name}}</view>
+        <view class="order-goods-rule">{{item.sname==null?'':item.sname}}</view>
+      </view>
+      <view class="order-goods-right">
+        <view class="order-goods-perice">￥{{item.price}}</view>
+        <view class="order-goods-number">x{{item.count}}</view>
+      </view>
+      <view style="clear:both;"></view>
+    </view>
+  </block>
+
+  <view class="form">
+    <view class="form-row">
+      <title class="form-title">物流方式</title>
+      <view class="experss-rigth">
+        <block wx:if='{{detail.dtype==0}}'>
+        <view class="experss-type">自提</view>
+        </block>
+        <block wx:if='{{detail.dtype==1}}'>
+        <view class="experss-type">配送</view>
+        </block>
+        
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="form-row">
+      <title class="form-title">买家留言</title>
+      <view class="textarea-wrp">
+        <text>{{detail.remarks}}</text>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="form-row last-child">
+      <view class="business" bindtap="calling">
+        <image src="../../image/contact_ipone.png" class="business-ipone"></image>
+        <title> 拨打商家电话</title>
+      </view>
+    </view>
+  </view>
+
+  <view class="form" style="margin-top:30rpx;">
+    <view class="form-row">
+      <view class="form-row-box">
+        <view class="form-row-box-left">商品总价</view>
+        <view class="form-row-box-right">￥{{detail.goodsprice}}</view>
+        <view class="clear"></view>
+      </view>
+      <block wx:if='{{detail.dtype==1}}'>
+      <view class="form-row-box">
+        <view class="form-row-box-left">运费</view>
+        <view class="form-row-box-right">￥{{detail.expressprice}}</view>
+        <view class="clear"></view>
+      </view>
+      </block>
+      <block wx:if='{{detail.discount>0}}'>
+      <view class="form-row-box">
+        <view class="form-row-box-left">优惠券</view>
+        <view class="form-row-box-right">-￥{{detail.discount}}</view>
+        <view class="clear"></view>
+      </view>
+      </block>
+    </view>
+
+    <view class="form-row last-child">
+      <view class="form-row-box">
+        <view class="form-row-box-left">合计</view>
+        <view class="form-row-box-right">￥{{detail.price}}</view>
+        <view class="clear"></view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="form" style="margin-top:30rpx;">
+    <view class="form-row last-child">
+      <view class="form-row-box">
+        订单编号：{{detail.orderno}}
+      </view>
+      <view class="form-row-box">
+        创建时间：{{detail.created_at}}
+      </view>
+      <block wx:if='{{detail.paytime!=0}}'>
+        <view class="form-row-box">
+          支付时间：{{detail.paytime}}
+        </view>
+      </block>
+      <block wx:if='{{detail.sendtime!=0}}'>
+        <view class="form-row-box">
+          发货时间：{{detail.sendtime}}
+        </view>
+      </block>
+      <block wx:if='{{detail.finishtime!=0}}'>
+        <view class="form-row-box">
+          完成时间：{{detail.finishtime}}
+        </view>
+      </block>
+      <block wx:if='{{detail.applytime!=0}}'>
+        <view class="form-row-box">
+          申诉时间：{{detail.applytime}}
+        </view>
+      </block>
+      <block wx:if='{{detail.backtime!=0}}'>
+        <view class="form-row-box">
+          退款时间：{{detail.backtime}}
+        </view>
+      </block>
+    </view>
+  </view>
+ 
+   <view style=" width:90%; margin: 30rpx auto auto;">
+   <block wx:if='{{detail.status==1||detail.status==2}}'>
+     <view class="order-btn-btn order-btn-btn01" bindtap="refund">退款</view>
+    </block>
+    <block wx:if='{{detail.status==0}}'>
+      <view class="order-btn-btn" bindtap="topay">立即支付</view>
+      <view class="order-btn-btn order-btn-btn01" bindtap="del">取消订单</view>
+    </block>
+    <block wx:if='{{detail.status==1&&detail.dtype==0}}'>
+      <view class="order-btn-btn order-btn-btn02" bindtap="finish">确认完成</view>
+    </block>
+    <block wx:if='{{detail.status==2}}'>
+      <view class="order-btn-btn order-btn-btn02" bindtap="finish">确认完成</view>
+    </block>
+  </view>
+ <view style="height:20rpx"></view>
+</view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+  <view class="payment-details-title">付款详情</view>
+
+
+  <view class="payment-details-box" data-paytype='2' bindtap="changepay">
+    <view class="payment-details-left">微信支付</view>
+   <icon class=" payment-details-icon " type="{{paytype==2?'success':''}} " size="20" ></icon>
+  </view>
+
+  <view class="payment-details-box " data-paytype='1' bindtap="changepay">
+    <view class="payment-details-left">余额支付<span style=" font-size:32rpx;">(可用余额：{{member.balance}})</span></view>
+    <icon class=" payment-details-icon" type="{{paytype==1?'success':''}} " size="20" ></icon>
+  </view>
+
+  <view class="payment-details-box ">
+    <view class="payment-details-left ">需付费</view>
+    <view class="payment-details-right" style="margin-right:30rpx; font-size:40rpx; color:#000;" >{{order.price}}元</view>
+  </view>
+
+  <view class="payment-details-btn " bindtap="pay">确认支付</view>
+  </action-sheet>

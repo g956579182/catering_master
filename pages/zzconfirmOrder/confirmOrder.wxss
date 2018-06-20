@@ -1,0 +1,54 @@
+page{background: #f6f6f6;}
+@import '/pages/common.wxss';
+textarea{height: 100rpx;width: 500rpx;padding-left: 10rpx;}
+.order-address{background: #fff;padding-top:34rpx; padding-bottom: 16rpx; border-bottom: 1rpx #d2d2d2 solid;}
+.order-address-icon{float:left;width: 26rpx; height: 30rpx;margin-left: 32rpx;margin-right: 20rpx;margin-top: 4rpx;
+}
+.order-address-message{float:left;width: 600rpx;}
+.order-address-tel{color: red; padding-left: 20rpx;}
+.order-addreess-address{font-size: 24rpx;color: #9e9e9e;line-height: 50rpx;width: 550rpx; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; }
+.order-address-right{float:right; width: 14rpx; height: 28rpx;margin-right: 20rpx;margin-top:30rpx; }
+.address-bg{height: 4rpx; clear: both; width: 100%;}
+
+.order-address-add{float:left;width: 30rpx; height: 30rpx;margin-left: 32rpx;margin-right: 20rpx;
+ background: #367cef; border-radius: 20rpx; color: #fff; text-align: center; line-height: 30rpx; font-size: 28rpx;
+}
+.order-express{float: right; width: 100rpx;}
+
+.order-goods-box{padding-top: 10rpx; padding-bottom: 10rpx;background: #f9f9f9;margin-bottom: 10rpx;}
+.order-goods-img{width:150rpx; height: 150rpx; float: left; padding-left: 20rpx; }
+
+.order-goods-text{float:left; padding-left:20rpx; padding-top: 10rpx; }
+.order-goods-title{font-size: 32rpx;}
+.order-goods-rule{font-size: 24rpx;color:#666;line-height: 50rpx;}
+.order-goods-right{float:right; padding-right: 20rpx; width: 40rpx;}
+
+.order-goods-perice{float:right; padding-top: 15rpx; color:#db1b25; font-size: 28rpx; }
+.order-goods-number{font-size: 24rpx;color:#666; padding-top: 15rpx;float:right; }
+.order-total{font-size: 28rpx; height:70rpx; line-height: 70rpx; border-bottom: 1rpx #e5e5e5 solid;  }
+
+
+
+.form{border-top:1rpx #e3e3e3 solid; background: #fff; }
+.form-row{border-bottom:1rpx #e3e3e3 solid ; margin-left: 4%;padding-top: 25rpx; padding-bottom: 25rpx;}
+.last-child{margin-left:0;padding-left: 4%; width: 96%;}
+.form-title{float: left;}
+
+
+
+.experss-rigth{float:right;width:200rpx; font-size: 28rpx;padding-right: 30rpx;}
+.experss-perice{ text-align: right;  color: red; }
+.experss-type{ text-align: right; color: #9e9e9e;line-height: 50rpx;}
+.leaing-message{min-height: 100rpx; float: left;}
+.textarea-wrp{float: left;width: 500rpx;}
+
+.discount{background: #fff; margin-top:30rpx;border-bottom: 1rpx #e3e3e3 solid;border-top: 1rpx #e3e3e3 solid; }
+.discount-box{margin-left: 30rpx;padding-top: 25rpx; padding-bottom: 25rpx;margin-right: 30rpx;}
+.discount-right{float: right; width: 200rpx;padding-top: 5rpx;}
+.discount-right-text{float: right; display: block;font-size: 28rpx;padding-right: 10rpx;}
+.coupon-number{font-size: 28rpx ; color:#9e9e9e;}
+
+.submit-order{height: 100rpx; background: #fff; position: fixed; left: 0; bottom: 0; border-top:1rpx #e3e3e3 solid;width: 100%;}
+.submit-order-right{height: 100rpx;  float: right;}
+.order-all-perice{float:right; line-height: 100rpx;font-size: 36rpx; padding-right: 20rpx;}
+.order-btn{width:300rpx; float:right; height: 100rpx;border: 0px; background: red; border-radius: 0px; color: #fff;line-height: 100rpx;}

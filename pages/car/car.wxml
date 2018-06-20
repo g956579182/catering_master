@@ -1,0 +1,46 @@
+<import src="/dist/quantity/index.wxml" />
+<view class="{{style}}">
+<view class="car container">
+  <block wx:for="{{carts}}" wx:key="item">
+    <view class="car-list">
+
+      <view class="car-checkbox">
+        <checkbox-group bindchange="check" data-index='{{index}}'>
+          <checkbox value="{{index}}" checked="{{checks[index]}}" />
+        </checkbox-group>
+      </view>
+
+      <view class="car-goods-img">
+        <image src="{{imgDomain+item.info.photos}}" />
+      </view>
+
+      <view class="car-text">
+        <title class="car-text-title">{{item.info.name}}</title>
+        <title class="car-text-rule">
+          <span>{{item.info.spec}}</span>
+        </title>
+        <title class="car-text-perice">￥{{item.price * item.count}}</title>
+      </view>
+
+      <view class="car-control">
+        <image src="../../image/edit.png" class="car-del" data-id="{{item.id}}" data-index="{{index}}" bindtap="deleteCart">删除</image>
+        <view class="car-member-btn">
+          <template is="zan-quantity" data="{{ quantity:item.count,min:1,max:item.info.stock, componentId: index, size: 'small' }}" />
+        </view>
+      </view>
+
+    </view>
+    <view class="car-line"></view>
+  </block>
+  <view style="height:100rpx;"></view>
+</view>
+
+
+<checkbox-group class="car-paly" bindchange="checkall">
+  <label class="paly-checkbox">
+    <checkbox checked='{{checkall}}' />全部选中
+  </label>
+  <view class="paly-perice">￥{{total}}</view>
+  <view class="paly" bindtap="pay">立即下单</view>
+</checkbox-group>
+</view>

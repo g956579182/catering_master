@@ -1,0 +1,124 @@
+<view class="since-address-box">
+  <view class="since-address-right">到店自提</view>
+  <view class="since-address-right-box">
+    <view class="since-address-name">自提点：{{shop.name}}</view>
+    <view class="since-address-address">地址：{{shop.address}}</view>
+  </view>
+  <view style="clear:both"></view>
+</view>
+
+<view class="since-contact">
+  <view class="since-contact-ipone" bindtap="calling">拨打电话</view>
+  <view class="since-contact-line"></view>
+  <view class="since-contact-since" bindtap="lookLocation">查看定位</view>
+</view>
+
+<view class="since-goods-box">
+  <block wx:for='{{glist}}' wx:item='item'>
+    <view class="order-goods-box">
+      <image class="order-goods-img" src="{{imgDomain+item.info.photos}}" />
+      <view class="order-goods-text">
+        <view class="order-goods-title">{{item.info.name}}</view>
+        <view class="order-goods-rule">{{item.info.spec}}</view>
+      </view>
+      <view class="order-goods-right">
+        <view class="order-goods-perice">￥{{item.info.price}}</view>
+        <view class="order-goods-number">x{{item.count}}</view>
+      </view>
+      <view style="clear:both;"></view>
+    </view>
+  </block>
+
+  <view class="usear-input-box">
+    <label>手机号</label><input type="text" placeholder="请输入你的电话，方便商家与你联系" bindblur="setCarrier" />
+  </view>
+  <view class="usear-input-box"> <label>提取时间</label>
+    <!-- <input type="text" placeholder="时间选择器" bindblur="setCarrytime" /> -->
+
+    <picker mode="date" value="{{date}}" start="2017-09-01" end="2018-09-01" bindchange="bindDateChange">
+      <view class="picker-time"  style="margin-left:20rpx;" >
+        {{date}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker-time">
+         {{time}}
+      </view>
+    </picker>
+  </view>
+  <view class="usear-input-box">
+    <label>备注</label><input type="text" placeholder="请输入的备注信息" bindblur="setRemarks" />
+  </view>
+
+  <view class="perice-total">
+    <title>合计</title>
+    <title>￥{{gtotal}}</title>
+  </view>
+
+</view>
+<view class="discount" hidden="{{nocards}}" bindtap="cardList">
+    <view class="discount-box">
+      <title class="coupon">优惠券</title>
+      <view class="discount-right">
+        <image class="order-address-right" style="margin:0px;" src="../../image/right.png" />
+        <title class="discount-right-text">{{text}}</title>
+      </view>
+
+    </view>
+  </view>
+  <view class="discount" wx:if="{{mdiscount>0}}">
+    <view class="discount-box">
+      <title class="coupon">会员折扣</title>
+      <view class="discount-right">
+        <title class="discount-right-text">{{mtext}}</title>
+      </view>
+
+    </view>
+  </view>
+<view class="discount">
+ <navigator url="/pages/confirmOrder/confirmOrder">
+  <view class="discount-box">
+    <title class="coupon">物流派送</title>
+
+    <view class="discount-right">
+     
+        <image class="order-address-right" style="margin:0px;" src="../../image/right.png" />
+        <title class="discount-right-text">前往</title>
+    
+    </view>
+
+  </view>
+    </navigator>
+</view>
+
+<view class="bottom-box"></view>
+
+
+<view class="submit-order">
+  <view class="submit-order-right">
+    <button class="order-btn" bindtap="create">提交订单</button>
+    <view class="order-all-perice">合计：<span style="color:red;">{{gtotal}}</span></view>
+  </view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+  <view class="payment-details-title">付款详情</view>
+
+
+  <view class="payment-details-box" data-paytype='2' bindtap="changepay">
+    <view class="payment-details-left">微信支付</view>
+    <icon class=" payment-details-icon " type="{{paytype==2?'success':''}} " size="20"></icon>
+  </view>
+
+  <view class="payment-details-box " data-paytype='1' bindtap="changepay">
+    <view class="payment-details-left">余额支付<span style=" font-size:32rpx;">(可用余额：{{member.balance}})</span></view>
+    <icon class=" payment-details-icon" type="{{paytype==1?'success':''}} " size="20"></icon>
+  </view>
+
+  <view class="payment-details-box ">
+    <view class="payment-details-left ">需付费</view>
+    <view class="payment-details-right" style="margin-right:30rpx; font-size:40rpx; color:#000;">{{ototal}}元</view>
+  </view>
+
+  <view class="payment-details-btn " bindtap="pay">确认支付</view>
+</action-sheet>

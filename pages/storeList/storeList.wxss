@@ -1,0 +1,15 @@
+/* pages/storeList/storeList.wxss */
+page{ background: #f0f0f0;}
+.store-list{background: #f68b0e; width: 700rpx; height: 200rpx; margin: 30rpx auto 10rpx auto;
+ border-radius: 10rpx;box-shadow:0 5rpx 5rpx rgba(0,0,0, .3) }
+.store-list-box{background: #fff;border-radius: 6rpx; width:691rpx; height: 200rpx; margin-left: 10rpx;}
+.store-list-box01{padding: 25rpx;}
+.store-img{width: 150rpx; height: 150rpx; float: left;}
+.store-list-right-box{ float:left; margin-left: 20rpx;}
+.store-cention{width: 450rpx; height: 100rpx; border-bottom: 1rpx solid #dedede; font-size: 32rpx; line-height: 50rpx;overflow: hidden;}
+
+.store-address{color: #737373;font-size:28rpx;}
+.store-btn-box{ float: right; width:450rpx; font-size: 30rpx;}
+.store-ipone{float: right; padding:5rpx 20rpx 5rpx 20rpx ; border: 1rpx #49a7ef solid; border-radius: 30rpx;margin: 10rpx 0 0 20rpx ;}
+.store-tamp{float: right;}
+

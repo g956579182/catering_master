@@ -1,0 +1,93 @@
+<import src="/dist/quantity/index.wxml" />
+<view class="{{style}}">
+  <view class="goods-search-bg">
+    <input type="text" class="goods-search" placeholder="请输入商品名称" bindconfirm="bindconfirmEvent" confirm-type="search" />
+  </view>
+
+
+
+  <scroll-view class="type-scroll" scroll-y="true" bindscroll="scroll" style="display:block;">
+    <view class="bar-list  {{cid == ''?'active':''}}" data-id="" bindtap="goodslist">全部商品</view>
+    <block wx:for="{{re_list}}" wx:key="item">
+      <view class="bar-list {{cid == item.id?'active':''}}" data-id="{{ item.id }}" bindtap="goodslist">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}" >
+    <view class='product-img'>
+      <image src="{{showimg}}" class='imgbg' bindtap='seedetails'></image>
+    </view>
+    <text class='product'>{{showgoods}}</text>
+    <text class='descr'>{{showdescr}}</text>
+    <text class="add" bindtap="actionSheetTap" data-index='{{showindex}}'>+</text>
+  </view>
+  <view class="goods-list-box">
+
+    <block wx:for="{{glist}}" wx:key="item">
+      <view class="goods-list">
+        <image class="goods-img" src="{{imgDomain+item.photos}}" bindtap='wachted' data-index='{{index}}'></image>
+        <view class="goods-text">
+          <view class="goods-title">{{item.name}}</view>
+          <view class="goods-rlue">{{item.descr}}</view>
+          <view class="goods-perice">￥{{item.price}}</view>
+
+        </view>
+        <view class="goods-btn">
+          <view wx:if='{{item.specs.length==0}}'>
+            <template is="zan-quantity" data="{{ quantity:item.quantity,min:0,max:item.stock, componentId: index, size: 'small' }}" />
+          </view>
+          <view wx:else>
+            <view bindtap="actionSheetTap" class="goods-rule-btn01" data-index='{{index}}'>立即购买</view>
+          </view>
+        </view>
+        <view style="clear:both"></view>
+      </view>
+    </block>
+    <view class="nomore" wx:if="{{nomore}}">
+      没有更多了
+    </view>
+  </view>
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange" wx:if="{{!actionSheetHidden}}">
+
+    <view class="select-goods-bpx">
+      <view class="select-box select-goods-message ">
+        <image class="select-goods-img" src="{{imgDomain+goods.photos}}"></image>
+        <view class="select-goods-message-right">
+          <view class="select-goods-message-title">{{goods.name}}</view>
+          <view class="select-goods-message-price">￥{{goods.price}}</view>
+        </view>
+      </view>
+
+      <view class="select-box select-rule-list">
+        <view class="select-rule-box">
+          <block wx:for="{{goods.specs}}" wx:key="item">
+            <view class="select-rule-name {{gsid==item.id?'select-active':''}}" bindtap="selectSpec" data-index='{{index}}'>{{item.name}}</view>
+          </block>
+          <view style="clear:both;"></view>
+        </view>
+      </view>
+      <view class=" select-box select-number-box">
+        <view class="select-number-left">
+          <view class="select-number-title">购买数量</view>
+          <view class="select-number">剩余件数{{spec.stock}}件</view>
+        </view>
+        <view class="select-number-right"> <template is="zan-quantity" data="{{ quantity:spec.quantity,min:0,max:spec.stock, componentId: 'spec_'+spec.id, size: 'small' }}" />
+        </view>
+        <view style="clear:both;"></view>
+      </view>
+    </view>
+
+    <view class="select-btn">
+      <view class="select-btn-car" bindtap="cart">加入购物车</view>
+      <view class="select-btn-buy" bindtap="buy">立即购买</view>
+      <view style="clear:both;"></view>
+    </view>
+
+  </action-sheet>
+  <navigator url="../car/car">
+    <view class="goods-car">
+      <image class="goods-car-img" src="../../image/car.png" />
+      <span class="goods-car-menber">{{cartcount}}</span>
+    </view>
+  </navigator>
+</view>

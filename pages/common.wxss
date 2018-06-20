@@ -1,0 +1,9 @@
+/* pages/test01/test01.wxss */
+.payment-details-title{line-height:70rpx; text-align: center; font-size: 32rpx; border-bottom: 1rpx solid #ededed;}
+.payment-details-box{margin-left: 20rpx; margin-right: 20rpx; height: 100rpx;
+border-bottom: 1rpx solid #ededed; font-size: 36rpx; color: #989898;}
+.payment-details-btn{background: #158de4; height: 80rpx; width: 640rpx; margin: 40rpx auto 40rpx auto; 
+color: #fff; text-align: center; line-height: 80rpx; font-size: 36rpx; border-radius: 8rpx;}
+.payment-details-left{float: left; line-height: 100rpx;}
+.payment-details-right{float: right; line-height: 100rpx;}
+.payment-details-icon{float: right; margin-top:30rpx;}

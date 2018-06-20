@@ -1,0 +1,31 @@
+
+@import "../confirmOrder/confirmOrder.wxss";
+@import '/pages/common.wxss';
+page{background: #f5f5f5;}
+.since-address-box{background:#fff;}
+.since-address-right{width: 72rpx; height: 72rpx; background: #ff6a6e;  color:#fff;  text-align: center;font-size: 36rpx;padding-left:19rpx; 
+ padding-top: 19rpx; padding-right:19rpx; padding-bottom: 19rpx;float:left; }
+.since-address-right-box{float:left; padding-left: 20rpx; font-size: 32rpx; line-height: 55rpx;}
+
+.since-contact{background: #fff; margin-top: 25rpx; height: 90rpx; font-size: 32rpx; }
+.since-contact-ipone{width:374rpx; line-height: 90rpx;float:left; text-align: center; } 
+.since-contact-line{width:1rpx; height: 70rpx; background: #ededed;float:left; margin-top: 10rpx; }
+.since-contact-since{width:374rpx; line-height: 90rpx;float:left; text-align: center;}
+
+.since-goods-box{margin-top: 25rpx; background: #fff; padding-top: 20rpx; border-bottom: 1rpx solid #ededed}
+.order-goods-box{border-top: 1rpx #ededed solid;border-bottom: 1rpx #ededed solid;}
+.usear-input-box{height: 80rpx; line-height: 80rpx; margin-left: 20rpx;font-size: 32rpx; padding-top: 10rpx;}
+
+.usear-input-box input{border: 1rpx solid #dedede; background: #f5f5f5; width:540rpx;
+float: left; margin-left: 20rpx; border-radius: 8rpx; height:60rpx; margin-top:5rpx;padding-left: 20rpx; }
+.usear-input-box label{float: left; width: 130rpx;text-align: right;}
+.perice-total{height: 110rpx; line-height: 100rpx;margin-left: 30rpx;
+ font-size: 36rpx; border-top:1rpx #ededed solid; margin-top: 10rpx;}
+.perice-total title:nth-child(1){float:left;}
+.perice-total title:nth-child(2){float:right; color: red;margin-right: 20rpx;}
+
+.bottom-box{height: 130rpx;}
+.coupon{font-size: 32rpx;}
+
+.since-address-address{width: 500rpx; overflow: hidden; text-overflow:ellipsis; white-space: nowrap;}
+.picker-time{float: left; width: 250rpx;}

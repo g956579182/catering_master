@@ -1,0 +1,38 @@
+<!--pages/rebate/rebate.wxml-->
+<view class='allpage pddtop'>
+  <view class='tixianjin'>
+    <text>提现金额</text>
+    <view class='tiarea'>
+      <text>￥</text>
+      <input type="digit" bindblur="setAmount"></input>
+    </view>
+    <view class='keti'><text>可提现的返利</text><text>{{member.benifit}}</text></view>
+  </view>
+  <view class='kaihumsg'>
+    <view>
+      <text>手机号码</text>
+      <input type='number' placeholder='请输入' bindblur="setMobile"></input>
+    </view>
+    <view>
+      <text>开户姓名</text>
+      <input type='text' placeholder='请输入' bindblur="setAcctName"></input>
+    </view>
+    <view>
+      <text>银行卡号</text>
+      <input type='text' placeholder='请输入' bindblur="setCardno"></input>
+    </view>
+  </view>
+  <view class='arrim'>
+    <text>1个工作日到账</text>
+  </view>
+  <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <view class='product-img'>
+      <image src="/image/sucess.png" class='imgbg'></image>
+      <text>提现成功</text>
+    </view>
+  </view>
+  <view class='confirms'>
+    <button type='button' bindtap='withdraw'>确认提现</button>
+  </view>
+</view>

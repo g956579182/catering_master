@@ -1,0 +1,124 @@
+<view class="container">
+  <view class="order-address">
+    <image class="order-address-icon" src="../../image/address_icon.png" />
+    <navigator url="/pages/myAddress/myAddress?dfrom=order">
+    <view class="order-address-message">
+      <title>收货人：{{address.name}} </title>
+      <title class="order-address-tel">{{address.mobile}}</title>
+      <view class="order-addreess-address">收货地址：{{address.province+address.city+address.country+address.address}}</view>
+    </view>
+    <image class="order-address-right" src="../../image/right.png" />
+    </navigator>
+    <image class="address-bg" src="../../image/address.png" />
+  </view>
+
+  <view style="background:#fff;">
+    <block wx:for='{{glist}}' wx:key='item'>
+      <view class="order-goods-box">
+        <image class="order-goods-img" src="{{imgDomain+item.info.photos}}" />
+        <view class="order-goods-text">
+          <view class="order-goods-title">{{item.info.name}}</view>
+          <view class="order-goods-rule">{{item.info.spec}}</view>
+        </view>
+        <view class="order-goods-right">
+          <view class="order-goods-perice">￥{{item.info.price}}</view>
+          <view class="order-goods-number">x{{item.count}}</view>
+        </view>
+        <view style="clear:both;"></view>
+      </view>
+    </block>
+</view>
+
+
+
+  <view class="form">
+    <view class="form-row ">
+      <title class="form-title">商品合计</title>
+      <view class="experss-rigth">
+        <view class="experss-perice">￥{{gtotal}}</view>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="form-row">
+      <title class="form-title">快递费用</title>
+      <view class="experss-rigth">
+        <view class="experss-perice">￥{{expressprice}}</view>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="form-row last-child">
+      <title class="form-title">买家留言</title>
+      <view class="textarea-wrp">
+        <textarea auto-height bindblur="setRemarks"/>
+      </view>
+      <view class="clear"></view>
+    </view>
+    
+  </view>
+<view class="discount" hidden="{{nocards}}" bindtap="cardList">
+    <view class="discount-box">
+      <title class="coupon">优惠券</title>
+      <view class="discount-right">
+        <image class="order-address-right" style="margin:0px;" src="../../image/right.png" />
+        <title class="discount-right-text">{{text}}</title>
+      </view>
+
+    </view>
+  </view>
+  <view class="discount" wx:if="{{mdiscount>0}}">
+    <view class="discount-box">
+      <title class="coupon">会员折扣</title>
+      <view class="discount-right">
+        <title class="discount-right-text">{{mtext}}</title>
+      </view>
+
+    </view>
+  </view>
+<view class="discount">
+    <view class="discount-box">
+      <title class="coupon">到店自提</title>
+      <view class="discount-right">
+        <navigator url="/pages/since/since">
+        <image class="order-address-right" style="margin:0px;" src="../../image/right.png" />
+        <title class="discount-right-text">前往</title>
+        </navigator>
+     </view>
+      
+    </view>
+</view>
+
+
+
+
+
+</view>
+
+<view class="submit-order">
+   <view class="submit-order-right">
+   <button class="order-btn" bindtap="create">提交订单</button>
+        <view class="order-all-perice">合计：<span style="color:red;">{{ototal-mreduce-reduce}}</span></view>    
+   </view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+  <view class="payment-details-title">付款详情</view>
+
+
+  <view class="payment-details-box" data-paytype='2' bindtap="changepay">
+    <view class="payment-details-left">微信支付</view>
+   <icon class=" payment-details-icon " type="{{paytype==2?'success':''}} " size="20" ></icon>
+  </view>
+
+  <view class="payment-details-box " data-paytype='1' bindtap="changepay">
+    <view class="payment-details-left">余额支付<span style=" font-size:32rpx;">(可用余额：{{member.balance}})</span></view>
+    <icon class=" payment-details-icon" type="{{paytype==1?'success':''}} " size="20" ></icon>
+  </view>
+
+  <view class="payment-details-box ">
+    <view class="payment-details-left ">需付费</view>
+    <view class="payment-details-right" style="margin-right:30rpx; font-size:40rpx; color:#000;" >{{ototal-mreduce-reduce}}元</view>
+  </view>
+
+  <view class="payment-details-btn " bindtap="pay">确认支付</view>
+
+
+</action-sheet>

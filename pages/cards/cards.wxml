@@ -1,0 +1,19 @@
+<!--cards.wxml-->
+<view class="person-row">
+  <view class="person-list notuse" bindtap="chooseCard" data-index='-1'>
+    <title class='title'>不使用优惠券</title>
+  </view>
+  <block wx:for='{{cards}}' wx:key='item'>
+    <view class="person-list" bindtap="chooseCard" data-index='{{index}}'>
+      <image class="icon" src="{{imgUrl+item.logo}}" />
+      <title class='title'>{{item.title}}</title>
+      <view class="condition">
+        <title class='' >使用条件：满{{item.least_cost}}元</title>
+
+        <title class='' wx:if="{{item.type=='CASH'}}">减{{item.reduce}}元</title>
+        <title class='' wx:if="{{item.type=='DISCOUNT'}}">{{item.discount}}折</title>
+      </view>
+    </view>
+  </block>
+
+</view>

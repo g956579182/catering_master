@@ -1,0 +1,7 @@
+{
+  "extEnable": true,
+  "ext": {
+    "shopid": "1",
+    "module":"cy"
+  }
+}
